@@ -1,0 +1,133 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  font-family: "Fraunces", serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+}
+
+.imagenzinha {
+  width: 50%;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.desc {
+  width: 50%;
+
+  border-radius: 0 0.2rem 0.2rem 0;
+  padding: 1.54rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.57rem;
+}
+
+.perf {
+  color: var(--dark-grayish-blue);
+}
+
+p {
+  color: var(--dark-grayish-blue);
+  font-size: 14px;
+}
+
+.name1 {
+  font-family: "Fraunces", serif;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  color: var(--dark-cyan);
+  font-family: "Fraunces", serif;
+}
+
+.discount {
+  text-decoration: line-through;
+}
+
+.purchase > img {
+  width: 0.875rem;
+}
+
+.purchase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--dark-cyan);
+
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--white);
+  padding: 0.7rem;
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+.purchase:hover {
+  cursor: pointer;
+  background-color: hsl(158, 66%, 14%);
+  transition-duration: 0.5s;
+}
+
+@media only screen and (max-width: 575px) {
+  .container {
+    flex-direction: column;
+    overflow: hidden;
+    width: 90%;
+  }
+
+  .desc {
+    width: 100%;
+  }
+  .imagenzinha {
+    content: url(./images/image-product-mobile.jpg);
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0px 0px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
